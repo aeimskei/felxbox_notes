@@ -70,6 +70,8 @@ Flexbox styles will be done here. When we apply Flexbox layout, you can place th
 
 But, before we can use any Flexbox property, we need to **define a Flex container** in our layout.
 
+## display: flex;
+
 In this example, take our parent ```container``` div will be the Flex container.
 
 * Flexbox give you a whole new way of using the CSS **display** property. 
@@ -94,6 +96,8 @@ We now see the default behavior of Flexbox layout. The Flex items are laid out h
 
 They're also laid out on the cross axis from the top start side to the bottom inside of the flex container. This means that the Flex item expands to fill the full height of the Flex container.
 
+## height property
+
 Let's see what happens when we increase the height of the container. Give the ```.container``` rule of ```height``` property and set the value to 300px;
 
 ```
@@ -108,3 +112,26 @@ As you can see, the Flex item stretch to fill the Flex container height bc we ad
 <kbd>![alt text](img/height.png "screenshot")</kbd>
 
 By default, ```display: flex``` creates a **block level container**. The Flex container takes up a full line, but it doesn't have to take up a full line if you don't want it to.
+
+## display: inline-flex
+
+The ```display``` value of **inline-flex** in ```container``` creates an **inline level**.
+
+```
+.container {
+  display: inline-flex;
+  height: 300px;
+}
+```
+
+<kbd>![alt text](img/height.png "screenshot")</kbd>
+
+The Flex container now behaves like an inline element and takes up as much space as its content. So, it can lay out beside other inline content.
+
+<kbd>![alt text](img/inlineflex.png "screenshot")</kbd>
+
+Remember, in Flex, any element outside a Flex container is not affected by the Flexbox layout. Only children of the Flex container automatically become Flex items.
+
+<kbd>![alt text](img/flexbox.png "screenshot")</kbd>
+
+So that means, if a new ```<div>``` is added outside the ```<div class=container>``` it will not be affected by the Flexbox Properties. Unless you set its ```display``` value to ```flex or inline-flex```.
