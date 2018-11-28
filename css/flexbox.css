@@ -5,5 +5,7 @@ FLEXBOX
 /* est. flex formatting context */
 .container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 280px;
 }
