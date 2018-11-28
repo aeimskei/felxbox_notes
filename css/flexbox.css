@@ -5,4 +5,5 @@ FLEXBOX
 /* est. flex formatting context */
 .container {
   display: flex;
+  height: 300px;
 }

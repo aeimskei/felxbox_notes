@@ -102,3 +102,9 @@ Let's see what happens when we increase the height of the container. Give the ``
   height: 300px;
 }
 ```
+
+As you can see, the Flex item stretch to fill the Flex container height bc we added ```height: 300px;```. Makes it stretch from top to bottom. So, from the **start** of the Cross Axis to the **end**.
+
+<kbd>![alt text](img/height.png "screenshot")</kbd>
+
+By default, ```display: flex``` creates a **block level container**. The Flex container takes up a full line, but it doesn't have to take up a full line if you don't want it to.
