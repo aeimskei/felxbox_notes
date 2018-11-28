@@ -36,7 +36,10 @@ But, you can easily change the directions. For example, you can switch **column 
 
 <kbd>![alt text](img/cross.png "screenshot")</kbd>
 
-**index.html**
+## index.html
+
+Notice that there's a ```<div class="container">``` and nested inside of the div are ```6 divs that share the class item```.
+
 ```
 <!DOCTYPE html>
 <html>
@@ -59,7 +62,12 @@ But, you can easily change the directions. For example, you can switch **column 
 </html>
 ```
 
-**page.css**
+## page.css
+
+Some base styles for the page. Adds ```white``` to the background of the ```containter```. The divs with ```item``` class inside has a ```light-blue``` background and ```5px margins```.
+
+Currently, the item divs are in the normal document flow. They display as **stacked block level elements** in the order they appear on the mark-up. We'll cahnge it up in the **flex.css** file.
+
 ```
 * {
 	box-sizing: border-box;
@@ -88,7 +96,15 @@ body {
 }
 ```
 
-**flexbox.css**
+## flexbox.css
+
+Flexbox styles will be done here. When we apply Flexbox layout, you can place them anywhere in the container. For example, you can make the ```item``` appear side-by-side and make the last one appear first/second/third/fourth.
+
+But, before we can use any Flexbox property, we need to **define a Flex container** in our layout.
+
+In this example, our ```container``` div will be the Flex container.
+
+
 ```
 .container {
   display: flex;
