@@ -1,40 +1,4 @@
-# Flexbox Layout
-
-Important Flexbox Elements
-
-## Flexbox Container and Items
-
-* **Flex containers** - sets the context for the layout and contains flex items, the actual element you layout using flexbox. It can be any block level or inline element (like a ```<div>```, ```<ul>```, etc.)
-* **Flex items** - every direct child of a flex container is called a flex item. There can be any number of flex items inside a flex container.
-
-Say the ```<ul>``` is a Flex container and the ```<li>``` elements are the Flex items. Once the children are Flex items, you can take advantage of Flexbox's powerful alignment properties.
-
-Flex Container & Flex Items
-
-<kbd>![alt text](img/flexcontainer.png "screenshot")</kbd>
-
-With Flexbox's alignment properties, the ```<li>``` can be laid out in any direction and can have flexible dimensions that adapt to the available space inside the ```<ul>```.
-
-## Flexbox Axes
-
-Everything in a Flexbox is **relative** to these two axes.
-
-* **Main axis** - is the primary axis (top horizontal) along which Flex items are laid out. It defines the direction of the Flex items in the Flex container.
-
-* **Cross axis** - runs perpendicular to the Main axis
-
-<kbd>![alt text](img/flexaxes.png "screenshot")</kbd>
-
-Each axis has a start side and an end side.
-
-* The default **main start** and the **main end** direction of the main axis is left to right.
-* The default direction of the cross axis is top to bottom.
-
-<kbd>![alt text](img/main.png "screenshot")</kbd>
-
-But, you can easily change the directions. For example, you can switch **column layout** along the main axis to a vertical layout using Flexbox properties.
-
-<kbd>![alt text](img/cross.png "screenshot")</kbd>
+# Flexbox Layout Example
 
 ## index.html
 
@@ -66,7 +30,7 @@ Notice that there's a ```<div class="container">``` and nested inside of the div
 
 Some base styles for the page. Adds ```white``` to the background of the ```containter```. The divs with ```item``` class inside has a ```light-blue``` background and ```5px margins```.
 
-Currently, the item divs are in the normal document flow. They display as **stacked block level elements** in the order they appear on the mark-up. We'll cahnge it up in the **flex.css** file.
+Currently, the item divs are in the normal document flow. They display as **stacked block level elements** in the order they appear on the mark-up. We'll change it up in the **flex.css** file.
 
 ```
 * {
@@ -96,14 +60,41 @@ body {
 }
 ```
 
+Initial styling from just index.html and page.css styling looks like this:
+
+<kbd>![alt text](img/initial.png "screenshot")</kbd>
+
 ## flexbox.css
 
 Flexbox styles will be done here. When we apply Flexbox layout, you can place them anywhere in the container. For example, you can make the ```item``` appear side-by-side and make the last one appear first/second/third/fourth.
 
 But, before we can use any Flexbox property, we need to **define a Flex container** in our layout.
 
-In this example, our ```container``` div will be the Flex container.
+In this example, take our parent ```container``` div will be the Flex container.
 
+* Flexbox give you a whole new way of using the CSS **display** property. 
+
+You create a Flex container by setting the display property of an element to one of the Flexbox layout styles.
+
+* ```.container { display: flex}``` - establishes a flex formatting context inside the container div. So, every item div inside the container div automatically becomes a Flex item.
+
+<kbd>![alt text](img/flexcontainer.png "screenshot")</kbd>
+
+How **flex** changed the container's layout. 
+
+```
+.container {
+  display: flex;
+}
+```
+
+We now see the default behavior of Flexbox layout. The Flex items are laid out horizontally on the **main axis** from left-to-right. 
+
+<kbd>![alt text](img/flexcont.png "screenshot")</kbd>
+
+They're also laid out on the cross axis from the top start side to the bottom inside of the flex container. This means that the Flex item expands to fill the full height of the Flex container.
+
+Let's see what happens when we increase the height of the container. Give the ```.container``` rule of ```height``` property and set the value to 300px;
 
 ```
 .container {
