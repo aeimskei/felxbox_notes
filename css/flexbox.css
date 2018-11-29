@@ -6,5 +6,14 @@ FLEXBOX
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
+
+/* target specific items */
+/* .item-1 {
+  margin-right: auto;
+}
+
+.item-6 {
+  margin-left: auto;
+} */
