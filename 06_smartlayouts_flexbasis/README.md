@@ -116,14 +116,65 @@ When setting both the `flex-grow` and `flex-basis` value of a Flex item, it's re
 
 The `flex` shorthand property intelligently sets some of the values for, when you don't specify them.
 
+The second and thrid values, for `flex-shrink` and `flex-basis` in the `flex` shorthand are optional.
+
+```
+.item {
+  flex: flex-grow flex-basis flex-shrink;
+}
+```
+
+Using only `1` number value sets the `flex-grow` value of the items.
+
 ```
 .item {
   flex: 1;
 }
 ```
 
-Using only `1` number value sets the `flex-grow` value of the items.
+And it automatically set the `flex-basis` value to `0`, which makes the items proportional within the space the Flex container, but the Flex items do not redistribute the space inside the Flex container when it's narrowed.
 
+<kbd>![alt text](img/noredist.png "screenshot")</kbd>
+
+So, they don't break to new lines bc `flex-basis: 0` means that the items can shrink all the way to the `width: 0px`.
+
+## What if We Want the Initial Size to be 200px
+
+```
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex: 1 200px;
+}
+```
+
+Now, it's back to normal and is redistributing like before.
+
+## Grow Size of Only 1 Item with `flex-grow` property
+
+```
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex: 1 200px;
+}
+
+.item-2 {
+  flex-grow: 2;
+}
+```
+
+`item-2` will get twice as much space.
+
+<kbd>![alt text](img/grow2.png "screenshot")</kbd>
+
+We're not using the `flex` shorthand here bc we only want to affect `item-2`'s `flex-grow`. Using the shorthand will reset `item-2`'s `flex-basis` back to `0`, making it not grow at all.
 
 [flex - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/flex)\
 [flex-grow - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)\

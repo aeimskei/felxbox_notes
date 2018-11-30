@@ -9,5 +9,9 @@ FLEXBOX
 }
 
 .item {
-  flex: 1;
+  flex: 1 200px;
+}
+
+.item-2 {
+  flex-grow: 2;
 }
