@@ -8,11 +8,6 @@ FLEXBOX
   flex-wrap: wrap; /* gives multi-line flex container */
 }
 
-/* target all flex items */
 .item {
-  flex-grow: 1;
-}
-
-.item-1 {
-  flex-grow: 4;
+  flex: 1;
 }
