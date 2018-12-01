@@ -134,3 +134,12 @@ In **index.html**, paste some text inside the footer.
 Look at how the footer remains in the same palce without dropping below the viewport height.
 
 <kbd>![alt text](img/multilinedfooter.png "screenshot")</kbd>
+
+* When you make body a flex container, it lays out all its direct children horizontally on a single line.
+* Setting the flex-direction of body to column stacks its flex items vertically.
+* 1vh is equal to 1/100th or 1% of the viewport height.
+
+[min-height](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height)\
+[Sizing with vh Units](http://snook.ca/archives/html_and_css/vm-vh-units)\
+[Flexbox Froggy](http://flexboxfroggy.com/) - A fun way to practice Flexbox\
+[Flexbugs](https://github.com/philipwalton/flexbugs) - community-curated list of flexbox issues and cross-browser workarounds for them
