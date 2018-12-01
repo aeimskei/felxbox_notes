@@ -118,3 +118,19 @@ The other sticky footer methods works well only when the footer has a fixed heig
 
 What's great about the Flexbox method is that you can have a flexible multi-lined footer in your layout.
 
+## Multi-lined Sticky Footer
+
+In **index.html**, paste some text inside the footer.
+
+```
+<footer class="main-footer">
+  <div class="footer-inner">
+    <span>&copy;2015 Residents of The Best City Ever.</span>
+    <p>Croissant macaroon pie brownie. Cookie marshmallow liquorice gingerbread caramels toffee I love chocolate. Wafer lollipop dessert. Bonbon jelly beans pudding dessert sugar plum. Marzipan toffee drag&#233;e chocolate bar candy toffee pudding I love. Gummi bears pie gingerbread lollipop.</p>
+  </div>
+</footer>
+```
+
+Look at how the footer remains in the same palce without dropping below the viewport height.
+
+<kbd>![alt text](img/multilinedfooter.png "screenshot")</kbd>
